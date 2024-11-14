@@ -1,0 +1,40 @@
+services:
+  - type: web
+    plan: free
+    name: sparky
+    runtime: docker
+    region: Frankfurt
+    branch: V-2.00
+    repo: https://github.com/Marianavivi/Sparky
+    #buildCommand: |
+    #  apt-get update && \
+    #  apt-get install -y ffmpeg && \
+    #  npm install
+    autoDeploy: true
+    healthCheckPath: /
+    #startCommand: npm start
+    envVars:
+      - key: ANTI_LINK
+        value: "true"
+      - key: ALLWAYS_OFFLINE
+        value: "false"
+      - key: ANTI_BAD_WORD
+        value: "true"
+      - key: AUTO_REPLY
+        value: "false"
+      - key: WC_GB
+        value: "true"
+      - key: BOT_NUMBER
+        value: "254732647560"
+      - key: AUTO_STICKER
+        value: "false"
+      - key: READ_CMD
+        value: "true"
+      - key: AUTO_READ_STATUS
+        value: "true"
+      - key: AUTO_VOICE
+        value: "true"
+      - key: MODE
+        value: "private"
+      - key: SESSION_ID
+        value: "YOUR_SESSION_ID"
