@@ -4,8 +4,8 @@ services:
     name: sparky
     runtime: docker
     region: Frankfurt
-    branch: V-2.00
-    repo: https://github.com/Marianavivi/Sparky
+    branch: master
+    repo: https://github.com/Marianavivi/Sparky.git
     #buildCommand: |
     #  apt-get update && \
     #  apt-get install -y ffmpeg && \
@@ -14,27 +14,35 @@ services:
     healthCheckPath: /
     #startCommand: npm start
     envVars:
-      - key: ANTI_LINK
-        value: "true"
-      - key: ALLWAYS_OFFLINE
-        value: "false"
-      - key: ANTI_BAD_WORD
-        value: "true"
-      - key: AUTO_REPLY
-        value: "false"
-      - key: WC_GB
-        value: "true"
-      - key: BOT_NUMBER
-        value: "254732647560"
-      - key: AUTO_STICKER
-        value: "false"
-      - key: READ_CMD
-        value: "true"
-      - key: AUTO_READ_STATUS
-        value: "true"
-      - key: AUTO_VOICE
-        value: "true"
-      - key: MODE
-        value: "private"
+      - key: BotName
+        value: "SPARKY"
+      - key: Footer
+        value: "© Sparky"
+      - key: Prefix
+        value: "."
+      - key: ThemeEmoji
+        value: "💠"
+      - key: Owner_Name
+        value: "Mariana"
+      - key: Owner_Number
+        value: "25473264xxxx"
+      - key: Insta
+        value: "marianavivi"
+      - key: Author
+        value: "Mariana"
+      - key: PackName
+        value: "Sparky • Stickers"
+      - key: Web
+        value: "https://github.com/Marianavivi"
+      - key: GcLink
+        value: "https://chat.whatsapp.com/Gp00pwuFB0wIhu4Hp688M5"
+      - key: Warn_Limits
+        value: "3"
+      - key: Cooldown_Timer_Seconds
+        value: "5"
+      - key: Port
+        value: "8080"
+      - key: MongoDB
+        value: "YOUR_MONGODB_URL"
       - key: SESSION_ID
         value: "YOUR_SESSION_ID"
